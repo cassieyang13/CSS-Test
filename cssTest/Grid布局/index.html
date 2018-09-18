@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+
+        .container{
+            grid-template-columns: 40px 50px auto 50px 40px;
+            grid-template-rows: 25% 100px auto;
+        }
+
+        /*repeat()定义多个重复的值*/
+        .container {
+            grid-template-columns: repeat(3, 20px [col-start]) 5%;
+        }
+
+        /*fr单元 等分网格容器剩余可用空间*/
+        .container {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+<div class="container"></div>
+</body>
+</html>

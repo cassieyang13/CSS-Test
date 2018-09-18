@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .grid-area-a {
+            grid-area: header;
+        }
+        .grid-area-b {
+            grid-area: main;
+        }
+        .grid-area-c {
+            grid-area: sidebar;
+        }
+        .grid-area-d {
+            grid-area: footer;
+        }
+        .card {
+            display: grid;
+            grid-template-columns: 50px 50px 50px 50px;
+            grid-template-rows: auto;
+            grid-template-areas: "header header header header" "main main . sidebar" "footer footer footer footer";
+        }
+        .grid-area {
+            border: 1px solid #c87100;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div class="grid-area grid-area-a">A区域</div>
+    <div class="grid-area grid-area-b">B区域</div>
+
+    <div class="grid-area grid-area-c">C区域</div>
+    <div class="grid-area ">empty区域</div>
+    <div class="grid-area grid-area-d">D区域</div>
+</div>
+
+</body>
+</html>

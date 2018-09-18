@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 50px 500px 50px;
+            grid-template-areas: "h h h h h h h h h h h h" "m m c c c c c c c c c c" "f f f f f f f f f f f f";
+        }
+
+
+        .header {
+            background-color: #FFDAB9;
+            grid-area: h;
+        }
+
+        .menu {
+            background-color: #FFC125;
+            grid-area: m;
+        }
+
+        .content {
+            background-color: #FFB6C1;
+            grid-area: c;
+        }
+
+        .footer {
+            background-color: #FFA500;
+            grid-area: f;
+        }
+
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-areas: "m m m m m m h h h h h h" "c c c c c c c c c c c c" "f f f f f f f f f f f f";
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">header</div>
+    <div class="menu">menu</div>
+    <div class="content">content</div>
+    <div class="footer">footer</div>
+</div>
+</body>
+</html>

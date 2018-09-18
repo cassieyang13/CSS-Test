@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Title</title>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: 150px auto 150px;
+            grid-gap: 1em;
+        }
+
+        header,
+        aside,
+        article,
+        footer {
+            background: #eaeaea;
+            padding: 1em;
+        }
+
+        header, footer {
+            grid-column: 1 / 4;
+        }
+
+        /* Demo Specific Styles */
+        body {
+            margin: 0 auto;
+            max-width: 56em;
+            padding: 1em 0;
+        }
+
+        .grid > * {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 10vh;
+        }
+
+        @media all and (max-width: 700px) {
+            aside,
+            article {
+                grid-column: 1 / 4;
+            }
+        }
+    </style>
+
+    <!--[if <keywords>? IE <version>?]>
+        HTML代码块
+    <![endif]-->
+
+
+</head>
+<body>
+
+<div class="grid">
+    <header>
+        Header
+    </header>
+
+    <aside class="sidebar-left">
+        Left Sidebar
+    </aside>
+
+    <article>
+        Article
+    </article>
+
+    <aside class="sidebar-right">
+        Right Sidebar
+    </aside>
+
+    <footer>
+        Footer
+    </footer>
+</div>
+</body>
+</html>
